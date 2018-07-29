@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import "./NavigationItems.css";
 
@@ -7,12 +8,14 @@ const NavigationItems = props => {
 		<nav>
 			<ul className="navigation-items">
 				<li>
-					<a href="/" className="active">
+					<NavLink exact to="/" activeClassName="active">
 						Burger Builder
-					</a>
+					</NavLink>
 				</li>
 				<li>
-					<a href="/">Checkout</a>
+					<NavLink exact to="/orders" activeClassName="active">
+						Orders
+					</NavLink>
 				</li>
 			</ul>
 		</nav>
